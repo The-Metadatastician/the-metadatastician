@@ -1,0 +1,45 @@
+// SPDX-License-Identifier: PMPL-1.0-or-later
+
+= Governance
+:toc: preamble
+:icons: font
+
+This document defines the governance model for The Metadatastician repository.
+
+== Governance Model
+
+Current model: Benevolent Dictator Temporarily (BDT).
+
+* Lead authority: project lead maintainer
+* Collaboration mode: open contribution with transparent review
+* Aim: evolve toward multi-maintainer committee governance as contributor base grows
+
+== Decision Types
+
+=== Standard Changes
+
+Examples: documentation, examples, low-risk workflow updates.
+
+Process:
+
+1. Pull request + rationale
+2. Maintainer review
+3. Merge on approval
+
+=== High-Impact Changes
+
+Examples: governance model changes, security policy changes, release policy changes.
+
+Process:
+
+1. Design issue or discussion
+2. Review window
+3. Lead maintainer final decision
+
+== Contribution Boundaries
+
+Contributors may propose changes to any file, but merges require maintainer approval.
+
+== Records
+
+Governance-impacting decisions should be documented in pull requests and reflected in `CHANGELOG.md`.

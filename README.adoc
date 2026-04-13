@@ -1,0 +1,87 @@
+// SPDX-License-Identifier: PMPL-1.0-or-later
+// SPDX-FileCopyrightText: 2026 Jonathan D.A. Jewell <jonathan@metadatastician.art>
+
+= The Metadatastician
+:toc: preamble
+:icons: font
+
+Enterprise metadata governance and traceability service for CC-Studio (Creative Communities).
+Part of the Hyperpolymath estate.
+
+== Overview
+
+The Metadatastician provides a practical metadata operations layer for creative and technical teams that need:
+
+* consistent metadata policy
+* auditable provenance trails
+* grounded documentation claims
+* release-time evidence checks
+
+== Estate Relevance
+
+This repository is aligned to current estate anchors:
+
+* `cc-studio.dev` is defined in `../cloudflare-dns-terraform/domains.csv`.
+* `metadatastician.art` and `metadatastician.net` are defined in `../cloudflare-dns-terraform/domains.csv`.
+* documentation claim-grounding is performed with the shared `../invariant-path` toolchain.
+
+== Capabilities
+
+* Metadata policy definitions and review workflows
+* Provenance and evidence mapping for release artifacts
+* Documentation integrity checks (claim-path + doc-claims)
+* Lightweight governance model suitable for enterprise collaboration
+
+== Repository Layout
+
+[source,text]
+----
+the-metadatastician/
+├── README.adoc
+├── CHANGELOG.md
+├── GOVERNANCE.adoc
+├── MAINTAINERS.md
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── LICENSE
+├── justfile
+├── scripts/
+│   ├── validate-docs.sh
+│   └── invariant-path.sh
+└── .github/workflows/
+    └── ci.yml
+----
+
+== Quick Start
+
+[source,bash]
+----
+# Validate repo docs and policy baseline
+./scripts/validate-docs.sh
+----
+
+Estate-local invariant checks:
+
+[source,bash]
+----
+# Scan this README for invariant annotations
+./scripts/invariant-path.sh scan --file ./README.adoc --artifact-uri repo://README.adoc --json
+
+# Ground factual doc claims across this repo
+./scripts/invariant-path.sh doc-claims --root /var/mnt/eclipse/repos/the-metadatastician --json
+----
+
+== Governance and Security
+
+* link:GOVERNANCE.adoc[GOVERNANCE.adoc]
+* link:MAINTAINERS.md[MAINTAINERS.md]
+* link:SECURITY.md[SECURITY.md]
+* link:CODE_OF_CONDUCT.md[CODE_OF_CONDUCT.md]
+* link:CONTRIBUTING.md[CONTRIBUTING.md]
+
+== License
+
+SPDX-License-Identifier: PMPL-1.0-or-later
+
+See link:LICENSE[LICENSE].
