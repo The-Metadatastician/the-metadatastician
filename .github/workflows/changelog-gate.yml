@@ -1,0 +1,17 @@
+name: Changelog Gate
+
+on:
+  pull_request:
+
+jobs:
+  changelog-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate changelog update policy
+        run: |
+          ./scripts/check-changelog.sh "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}"

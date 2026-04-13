@@ -3,6 +3,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [Unreleased]
+
+### Added
+- Changelog gate workflow for pull requests.
+- Tag-driven GitHub release automation using `CHANGELOG.md` sections.
+- Helper scripts for changelog policy and release-note extraction.
+
 ## [0.1.0] - 2026-04-13
 
 ### Added
