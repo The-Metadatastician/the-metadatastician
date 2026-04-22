@@ -3,6 +3,9 @@ name: Changelog Gate
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   changelog-gate:
     runs-on: ubuntu-latest
