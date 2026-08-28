@@ -4,6 +4,8 @@
 version: 'v0.0.2'
 workflows:
     '.github/workflows/hypatia-scan.yml': []
+    '.github/workflows/label-triage.yml': []
+    '.github/workflows/labels.yml': []
     '.github/workflows/secret-scanner.yml': []
     '.github/workflows/changelog-gate.yml':
         - 'actions/checkout@v7.0.1'
